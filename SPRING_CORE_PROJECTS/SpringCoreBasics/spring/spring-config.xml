@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <bean id="helloSpring" class="com.abhishek.classes.HelloSpring">
+    	<property name = "message" value = "Hello from spring."/>
+    </bean>
+    
+    <bean id="beanTemplate" abstract="true">
+    	<property name = "message1" value = "This is message1 in bean template."/>
+    	<property name = "message2" value = "This is message2 in bean template."/>
+    	<property name = "message3" value = "This is message3 in bean template."/>
+    </bean>
+    
+    <bean id="helloBeanDefinition" class="com.abhishek.classes.HelloBeanDefinition" parent="beanTemplate">
+    </bean>
+     
+</beans>
