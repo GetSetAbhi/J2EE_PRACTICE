@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
+<%
 	String studentId = request.getParameter("studentId");
 	int id = Integer.parseInt(studentId);
 	Student student = DatabaseUtil.getStudent(id);
